@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel In-Room Display</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="styles.css?v=hotel123">
+</head>
+<body>
+    <div id="app-container">
+        <div class="background-layer">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="dashboard">
+            <!-- Header Section -->
+            <header class="header-section">
+                <div class="brand">
+                    <img class="logo" src="" alt="Hotel Logo">
+                    <h1 class="hotel-name"></h1>
+                </div>
+                <div class="clock-weather">
+                    <div class="weather-widget">
+                        <img class="weather-icon" src="" alt="Weather">
+                        <div class="weather-info">
+                            <span class="temp"></span>
+                            <span class="condition"></span>
+                        </div>
+                    </div>
+                    <div class="time-widget">
+                        <h2 class="time-display"></h2>
+                        <p class="date-display"></p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Grid -->
+            <main class="main-grid">
+
+                <!-- Welcome Section (Top Left) -->
+                <section class="widget welcome-widget">
+                    <div class="welcome-content">
+                        <p class="room-number"></p>
+                        <h2 class="guest-name"></h2>
+                        <p class="loyalty-status"></p>
+                        <p class="welcome-message"></p>
+                    </div>
+                </section>
+
+                <!-- Room Service CTA (Bottom Left) -->
+                <section class="widget room-service-widget">
+                    <div class="rs-background"></div>
+                    <div class="rs-content">
+                        <h3 class="rs-headline"></h3>
+                        <p class="rs-desc"></p>
+                    </div>
+                    <img class="rs-qr" src="" alt="QR Code">
+                </section>
+
+                <!-- Center Column: TV Guide -->
+                <section class="widget tv-guide-widget">
+                    <div class="widget-header">
+                        <h3>TV Guide</h3>
+                    </div>
+                    <div class="tv-list" id="tv-list">
+                        <!-- TV items inserted via JS -->
+                    </div>
+                </section>
+
+                <!-- Right Column: Auto-rotating Restaurants & Attractions -->
+                <section class="widget discover-widget">
+                    <div class="widget-header">
+                        <h3 id="discover-title">Local Dining</h3>
+                    </div>
+                    <div class="discover-list" id="discover-list">
+                        <!-- Items inserted via JS -->
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js?v=hotel123"></script>
+</body>
+</html>

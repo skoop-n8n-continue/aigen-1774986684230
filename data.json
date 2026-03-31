@@ -1,0 +1,83 @@
+{
+  "app_id": "aigen-1774986684230",
+  "document_version": 1,
+  "sections": {
+    "app_settings": {
+      "hotel_name": { "type": "text", "label": "Hotel Name", "value": "The Grand Horizon" },
+      "logo": { "type": "file", "label": "Hotel Logo", "value": "assets/logo.svg", "meta": { "accepted_formats": ["png", "svg", "jpg"], "path": "assets/" } },
+      "background_image": { "type": "file", "label": "Background Image", "value": "assets/background.jpg", "meta": { "accepted_formats": ["png", "jpg"], "path": "assets/" } },
+      "primary_color": { "type": "color", "label": "Primary Color", "value": "#D4AF37" },
+      "secondary_color": { "type": "color", "label": "Secondary Color", "value": "#1A1A1A" },
+      "background_color": { "type": "color", "label": "Background Color", "value": "#0F0F0F" },
+      "text_color": { "type": "color", "label": "Text Color", "value": "#FFFFFF" }
+    },
+    "guest_info": {
+      "guest_name": { "type": "text", "label": "Guest Name", "value": "Mr. Raul Jung" },
+      "room_number": { "type": "text", "label": "Room Number", "value": "PH 42" },
+      "loyalty_status": { "type": "text", "label": "Loyalty Status", "value": "Platinum Elite" },
+      "welcome_message": { "type": "textarea", "label": "Welcome Message", "value": "Welcome to The Grand Horizon. We hope you enjoy your stay." }
+    },
+    "weather": {
+      "temperature": { "type": "number", "label": "Temperature", "value": 72 },
+      "condition": { "type": "text", "label": "Condition", "value": "Sunny" },
+      "icon": { "type": "file", "label": "Weather Icon", "value": "assets/weather_icon.svg", "meta": { "accepted_formats": ["png", "svg"], "path": "assets/" } }
+    },
+    "room_service_promo": {
+      "headline": { "type": "text", "label": "Room Service Headline", "value": "In-Room Dining" },
+      "description": { "type": "textarea", "label": "Description", "value": "Experience culinary excellence from the comfort of your suite. Available 24/7." },
+      "image": { "type": "file", "label": "Promo Image", "value": "assets/room_service.jpg", "meta": { "accepted_formats": ["jpg", "png"], "path": "assets/" } },
+      "qr_code": { "type": "file", "label": "Menu QR Code", "value": "assets/qr_code.png", "meta": { "accepted_formats": ["png", "svg"], "path": "assets/" } }
+    },
+    "restaurants": {
+      "type": "collection",
+      "label": "Nearby Restaurants",
+      "item_schema": {
+        "id": { "type": "text", "label": "ID" },
+        "name": { "type": "text", "label": "Restaurant Name" },
+        "cuisine": { "type": "text", "label": "Cuisine" },
+        "rating": { "type": "text", "label": "Rating" },
+        "image": { "type": "file", "label": "Image", "meta": { "accepted_formats": ["jpg", "png"], "path": "assets/restaurants/" } },
+        "sort_order": { "type": "number", "label": "Display Order", "meta": { "format": "integer" } }
+      },
+      "value": [
+        { "id": "rest_a1b2c3", "name": "Le Bernardin", "cuisine": "French Seafood", "rating": "4.9 ★", "image": "assets/restaurants/rest_a1b2c3_image.jpg", "sort_order": 1 },
+        { "id": "rest_d4e5f6", "name": "Katz's Delicatessen", "cuisine": "Deli", "rating": "4.8 ★", "image": "assets/restaurants/rest_d4e5f6_image.jpg", "sort_order": 2 },
+        { "id": "rest_g7h8i9", "name": "Carbone", "cuisine": "Italian", "rating": "4.7 ★", "image": "assets/restaurants/rest_g7h8i9_image.jpg", "sort_order": 3 }
+      ]
+    },
+    "attractions": {
+      "type": "collection",
+      "label": "Things To Do",
+      "item_schema": {
+        "id": { "type": "text", "label": "ID" },
+        "name": { "type": "text", "label": "Attraction Name" },
+        "distance": { "type": "text", "label": "Distance" },
+        "image": { "type": "file", "label": "Image", "meta": { "accepted_formats": ["jpg", "png"], "path": "assets/attractions/" } },
+        "sort_order": { "type": "number", "label": "Display Order", "meta": { "format": "integer" } }
+      },
+      "value": [
+        { "id": "attr_j1k2l3", "name": "Central Park", "distance": "0.5 mi", "image": "assets/attractions/attr_j1k2l3_image.jpg", "sort_order": 1 },
+        { "id": "attr_m4n5o6", "name": "Museum of Modern Art", "distance": "0.8 mi", "image": "assets/attractions/attr_m4n5o6_image.jpg", "sort_order": 2 },
+        { "id": "attr_p7q8r9", "name": "Broadway Theaters", "distance": "0.3 mi", "image": "assets/attractions/attr_p7q8r9_image.jpg", "sort_order": 3 }
+      ]
+    },
+    "tv_guide": {
+      "type": "collection",
+      "label": "TV Guide",
+      "item_schema": {
+        "id": { "type": "text", "label": "ID" },
+        "channel": { "type": "text", "label": "Channel Number" },
+        "network": { "type": "text", "label": "Network" },
+        "current_show": { "type": "text", "label": "Current Show" },
+        "sort_order": { "type": "number", "label": "Display Order", "meta": { "format": "integer" } }
+      },
+      "value": [
+        { "id": "tv_s1t2u3", "channel": "04", "network": "NBC", "current_show": "Local News", "sort_order": 1 },
+        { "id": "tv_v4w5x6", "channel": "07", "network": "ABC", "current_show": "Good Morning America", "sort_order": 2 },
+        { "id": "tv_y7z8a9", "channel": "09", "network": "HBO", "current_show": "Succession", "sort_order": 3 },
+        { "id": "tv_b1c2d3", "channel": "12", "network": "ESPN", "current_show": "SportsCenter", "sort_order": 4 },
+        { "id": "tv_e4f5g6", "channel": "15", "network": "CNN", "current_show": "Newsroom", "sort_order": 5 }
+      ]
+    }
+  }
+}
